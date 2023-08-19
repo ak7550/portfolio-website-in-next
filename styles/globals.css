@@ -5,3 +5,7 @@
 .active{
     color: #64ffda;
 }
+
+html {
+  scroll-behavior: smooth;
+}
