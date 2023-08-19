@@ -18,7 +18,10 @@ type NavBarItemComponentProps = {
 }
 
 function Navbar () {
-    const ref = useRef<HTMLDivElement | null>(null);
+    const ref = useRef<HTMLDivElement | null>( null );
+
+    const resumeDriveLink =
+        'https://drive.google.com/file/d/1v6N7c1hof5tUDkbO7-XjreOZqBX6W6TK/view?usp=sharing';
 
     // Use the callback version of useRef to set the ref value
     const setRef = (node: HTMLDivElement) => ref.current = node;
@@ -44,18 +47,23 @@ function Navbar () {
         e.currentTarget.classList.add("active");
     }
 
-    const ResumeComponent = (): React.ReactNode =>
-        <motion.button
-                  initial={{opacity: 0}}
-                  transition={{ delay: 0.1 * (navBarItemList.length) }}
-                  animate={{ opacity: 1 }}
-                  className='px-4 py-2 rounded-md text-textGreen text-[13px] border border-textGreen
-                  hover:bg-hoverColor duration-300'
-                  >
-                      <a href="/assets/Aniket_Kumar_Ghosh_resume.pdf" target="_blank" rel="noopener noreferrer">
-                        Resume
-                      </a>
-        </motion.button>
+    const ResumeComponent = (): React.ReactNode => (
+      <motion.button
+        initial={{ opacity: 0 }}
+        transition={{ delay: 0.1 * navBarItemList.length }}
+        animate={{ opacity: 1 }}
+        className="px-4 py-2 rounded-md text-textGreen text-[13px] border border-textGreen
+                  hover:bg-hoverColor duration-300"
+      >
+        <a
+          href={resumeDriveLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume
+        </a>
+      </motion.button>
+    )
 
     const NavBarItemComponent = ( { initialPosition, finalPosition } : NavBarItemComponentProps): React.ReactNode =>
         <>
