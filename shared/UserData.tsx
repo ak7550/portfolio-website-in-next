@@ -48,6 +48,8 @@ const userFirstName: string = "Aniket";
 const userMiddleName: string = "Kumar";
 const userLastName: string = "Ghosh";
 const userEmail: string = "ghoshaniketkumar7@gmail.com";
+const resumeDriveLink =
+  'https://drive.google.com/file/d/1v6N7c1hof5tUDkbO7-XjreOZqBX6W6TK/view?usp=sharing'
 
 const userBio: string = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aspernatur ipsum neque quisquam nobis nostrum qui enim omnis esse! Officia sint sapiente, explicabo praesentium enim vel consequuntur. Iure, corrupti voluptate.";
 
@@ -70,5 +72,5 @@ const techStackArr: IconObject[] = [
 ];
 
 
-export { iconObjectArr, userFirstName, userLastName, userMiddleName, userBio, techStackArr, userEmail };
+export { iconObjectArr, userFirstName, userLastName, userMiddleName, userBio, techStackArr, userEmail, resumeDriveLink };
 export type { IconObject };
