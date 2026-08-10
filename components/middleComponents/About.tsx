@@ -1,6 +1,6 @@
 import React from 'react'
 import SectionTitle from '../SectionTitle'
-import { IconObject, techStackArr } from '@/shared/UserData';
+import { IconObject, aboutParagraphs, techStackArr } from '@/shared/UserData';
 import Image from 'next/image';
 import profileImage from '../../public/assets/images/ProfileImge.jpg';
 
@@ -16,14 +16,10 @@ const About = () => {
               className='flex flex-col lg:flex-row gap-16'
           >
               <div className='w-full lgl:w-2/3 text-base text-textDark font-medium flex flex-col gap-4'>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus nostrum natus quod exercitationem placeat optio doloribus debitis, nam earum similique rem eveniet soluta obcaecati cupiditate? Corrupti debitis molestiae tempore aut.</p>
-                  <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi esse quisquam repellendus impedit quo labore? Aliquam perferendis delectus, voluptatem alias nostrum, porro odio obcaecati exercitationem temporibus quam consequatur eligendi earum?
-                      <span className='text-textGreen'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod assumenda </span>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, adipisci praesentium voluptates alias, quo iusto architecto, et officiis facilis quae aut minima consectetur eum? Explicabo laudantium tenetur deleniti necessitatibus voluptates!
-                      <span className='text-textGreen'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod assumenda </span>
-                  </p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod assumenda </p>
+                  {
+                      aboutParagraphs.map((paragraph: string, index: number): JSX.Element =>
+                          <p key={index}>{paragraph}</p>)
+                  }
 
                   <p>Here are few technologies that I have worked so far.</p>
                   <ul className='min-w-[450px] text-sm font-titleFont grid grid-cols-2 gap-2 mt-6'>

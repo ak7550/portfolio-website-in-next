@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaRegHand } from 'react-icons/fa6';
+import { contactMessage, userEmail } from '@/shared/UserData';
 
 const Contact = () => {
   return (
@@ -12,11 +13,9 @@ const Contact = () => {
       </p>
       <h2 className="font-titleFont text-5xl font-semibold">Get in touch...</h2>
       <p className="max-w-[600px] text-center text-textDark">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla a
-        corrupti sapiente quis quasi adipisci nisi facere id omnis itaque odio
-        quia dolorum, at reprehenderit beatae culpa est neque dolor.
+        {contactMessage}
       </p>
-      <a href="mailto:ghoshaniketkumar7@gmail.com">
+      <a href={`mailto:${userEmail}`}>
         <button className="w-40 h-14 border border-textGreen flex flex-row items-center justify-center mt-6 font-titleFont text-sm text-textGreen tracking-wider rounded-md hover:bg-hoverColor duration-300">
           Say Hello
           <FaRegHand className="rotate-45 p-3 font-titleFont text-5xl" />

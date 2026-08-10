@@ -17,9 +17,9 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Software Developer Portfolio
+          Aniket Kumar Ghosh | Software Engineer 3 @ NetApp
         </title>
-        <meta name="description" content="Software Developer Portfolio" />
+        <meta name="description" content="Backend-focused software engineer specializing in Node.js, TypeScript, distributed systems, and AI-integrated backend platforms." />
         <meta name="viewport" content="Software" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>

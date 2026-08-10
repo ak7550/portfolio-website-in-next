@@ -66,32 +66,30 @@ function Navbar () {
         <>
             {
             navBarItemList.map( ( item: string, index: number ): React.ReactNode => (
-                <li key={ index }>
+          <motion.li
+            key={ index }
+            initial={initialPosition}
+            transition={ { duration: 0.2, delay: 0.1 * index, ease: 'easeIn' } }
+            animate={finalPosition}
+          >
                     <Link
                         href={ `#${ item.toLowerCase() }` }
                         onClick={ ( e: React.MouseEvent<HTMLAnchorElement, MouseEvent> ) => {
                             handleScroll( e );
-                            closeSideBar( e );
+                closeSideBar();
                         } }
                         className='flex items-center gap-1 font-medium text-textDark
                                      hover:text-textGreen cursor-pointer duration-300 nav-link'
                     >
-                        <motion.li
-                            key={ index }
-                            initial={initialPosition}
-                            transition={ { duration: 0.2, delay: 0.1 * index, ease: 'easeIn' } }
-                            animate={finalPosition}
-                        >
-                            { index != 0 && <span className='text-textGreen'>0{ index }. </span> }
-                            { item }
-                        </motion.li>
+              { index != 0 && <span className='text-textGreen'>0{ index }. </span> }
+              { item }
                     </Link>
-                </li>
+          </motion.li>
             ) )
         }
         </>
 
-    const closeSideBar = ( e: React.MouseEvent ) => setshowMenu( false )
+    const closeSideBar = () => setshowMenu( false )
 
   return (
     <div className="w-full shadow-navbarShadow h-20 lg:h-[12vh] sticky top-0 z-50 bg-bodyColor px-4">

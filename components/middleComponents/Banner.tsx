@@ -1,4 +1,4 @@
-import { userBio, userFirstName } from '@/shared/UserData'
+import { userBio, userFirstName, userHeadline, userRoleSummary } from '@/shared/UserData'
 import { motion } from 'framer-motion'
 import React from 'react'
 
@@ -26,9 +26,18 @@ const Banner = () => {
       >
         {userFirstName}.
         <span className="text-textDark mt-2 lgl:mt-4">
-          I am a noob web Developer
+          {userHeadline}
         </span>
       </motion.h1>
+
+      <motion.h2
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.75, duration: 0.5 }}
+        className="text-xl lgl:text-2xl text-textDark/90 font-medium"
+      >
+        {userRoleSummary}
+      </motion.h2>
 
       <motion.p
         initial={{ opacity: 0, y: 10 }}
@@ -37,15 +46,6 @@ const Banner = () => {
         className="text-base md:max-w-[650px] text-textDark font-medium"
       >
         {userBio}
-        <a href="http://" target="_blank" rel="noopener noreferrer">
-          <span className="text-textGreen inline-flex relative cursor-pointer h-7 overflow-x-hidden group">
-            Learn More.
-            <span
-              className="absolute w-full h-[1px] bg-textGreen left-0 bottom-1 translate-x-[110%]
-                          group-hover:translate-x-0 transition-transform duration-500"
-            ></span>
-          </span>
-        </a>
       </motion.p>
 
       <motion.button

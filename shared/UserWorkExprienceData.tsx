@@ -15,16 +15,36 @@ type WorkExprienceObject = {
 const workExprienceArr: WorkExprienceObject[] = [
   {
     companyDetail: {
-      name: 'Anchanto',
+      name: 'NetApp (Marketplace Control Tower)',
       link: ""
     },
-    startDate: 'Jan 2022',
-    endDate: 'June 2022',
-    majorTechStacks: [techStackArr[0], techStackArr[1]],
-    position: 'Software Developer Intern',
+    startDate: 'Jan 2026',
+    endDate: 'Present',
+    majorTechStacks: [techStackArr[0], techStackArr[2], techStackArr[3]],
+    position: 'Software Engineer 3',
     notableContributions: [
-      "Built Backend server with 15+ REST API's on NodeJs and MySQL as database.",
-      'Implemented a client-side SPA with widgets on ReactJs.',
+      'Designed the high-level architecture and led a cross-functional team of 4 engineers to build and deploy an end-to-end AI chat application using NestJS, Next.js, and OpenAI SDK.',
+      'Engineered a Node.js MCP server to query production and analytics data, enabling LLM-assisted root-cause analysis for charging anomalies.',
+      'Upgraded Helm charts and established Jenkins CI/CD to ship shared licensing microservices across internal Kubernetes clusters.',
+      'Contributed core architecture design for Marketplace Control Tower with Go, Temporal, and Dynatrace as part of the founding engineering team.',
+    ],
+  },
+  {
+    companyDetail: {
+      name: 'NetApp (BlueXP)',
+      link: ""
+    },
+    startDate: 'Sep 2023',
+    endDate: 'Jul 2026',
+    majorTechStacks: [
+      techStackArr[0], techStackArr[1], techStackArr[3]
+    ],
+    position: 'MTS: Software Engineer II',
+    notableContributions: [
+      'Built a vanilla JavaScript back-charging engine that recovered about $1M in previously unbilled revenue in a single quarter.',
+      'Developed a revenue-loss calculator that reduced manual calculation effort by 52% year-over-year for overcharge and drop-charge analysis.',
+      'Created a charging-alert investigation service that reduced production charging errors and related incidents by 12%.',
+      'Implemented a billing-preference API in Node.js and Fastify to let customers choose subscription billing routes and improve billing flexibility.',
     ],
   },
   {
@@ -32,14 +52,16 @@ const workExprienceArr: WorkExprienceObject[] = [
       name: 'Anchanto',
       link: ""
     },
-    startDate: 'July 2022',
-    endDate: 'Present',
+    startDate: 'Jun 2022',
+    endDate: 'Sep 2023',
     majorTechStacks: [
-      techStackArr[0], techStackArr[1]
+      techStackArr[0], techStackArr[1], techStackArr[5]
     ],
-    position: 'Backend Software Developer',
+    position: 'Software Engineer',
     notableContributions: [
-      "Integrated Anchanto product service OMS with more than 8 marketplaces and carriers like Haravan (Vietnam), Quipup(UAE), Salla (UAE), Shopee (Korea), Grabmart, JD.com (Thailand) etc, via asynchronous REST/SOAP APIs/Plug-ins which increased the scalability and broadened the product's horizon.",
+      'Integrated Anchanto OMS with 8+ international marketplaces and carriers via asynchronous REST and SOAP APIs, supporting go-live and UAT across all integration projects.',
+      'Implemented retry logic, improved logging throughput, and restructured schedulers to improve server performance by 28% at scale.',
+      'Designed and maintained scalable backend services across SQL and NoSQL stacks for distributed order and parcel workflows.',
     ],
   },
 ];

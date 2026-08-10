@@ -1,5 +1,5 @@
 import { ArchieveData } from '@/shared/ProjectData';
-import { IconObject, techStackArr } from '@/shared/UserData';
+import { IconObject } from '@/shared/UserData';
 import React from 'react'
 import { FaRegFolder } from 'react-icons/fa';
 import { RxOpenInNewWindow } from 'react-icons/rx';
@@ -9,9 +9,9 @@ type Props = {
 }
 
 const ArchieveCard = ( { data }: Props ) => {
-    const {majorTechStacks, projectName, description} = data
+    const {majorTechStacks, projectName, description, projectLink, githubLink} = data
     return (
-      <a href="#" target='_blank'>
+      <a href={projectLink || githubLink || '#'} target='_blank' rel='noopener noreferrer'>
       <div className='w-full h-[24rem] rounded-lg bg-[#112240] p-7 flex flex-col justify-center gap-6 hover:-translate-y-2 transition-transform duration-300 group'>
           <div className='flex justify-between items-center'>
           <FaRegFolder className='text-4xl text-textGreen' />
