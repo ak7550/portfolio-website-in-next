@@ -45,21 +45,18 @@ function Navbar () {
     }
 
     const ResumeComponent = (): React.ReactNode => (
-      <motion.button
+      <motion.a
+        href={resumeDriveLink}
+        target="_blank"
+        rel="noopener noreferrer"
         initial={{ opacity: 0 }}
         transition={{ delay: 0.1 * navBarItemList.length }}
         animate={{ opacity: 1 }}
         className="px-4 py-2 rounded-md text-textGreen text-[13px] border border-textGreen
                   hover:bg-hoverColor duration-300"
       >
-        <a
-          href={resumeDriveLink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Resume
-        </a>
-      </motion.button>
+        Resume
+      </motion.a>
     )
 
     const NavBarItemComponent = ( { initialPosition, finalPosition } : NavBarItemComponentProps): React.ReactNode =>

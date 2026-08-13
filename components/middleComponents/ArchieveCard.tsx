@@ -10,8 +10,12 @@ type Props = {
 
 const ArchieveCard = ( { data }: Props ) => {
     const {majorTechStacks, projectName, description, projectLink, githubLink} = data
+    const href = projectLink || githubLink || '#'
     return (
-      <a href={projectLink || githubLink || '#'} target='_blank' rel='noopener noreferrer'>
+      <div
+        className='cursor-pointer'
+        onClick={() => href !== '#' && window.open(href, '_blank', 'noopener,noreferrer')}
+      >
       <div className='w-full h-[24rem] rounded-lg bg-[#112240] p-7 flex flex-col justify-center gap-6 hover:-translate-y-2 transition-transform duration-300 group'>
           <div className='flex justify-between items-center'>
           <FaRegFolder className='text-4xl text-textGreen' />
@@ -32,7 +36,7 @@ const ArchieveCard = ( { data }: Props ) => {
               }
             </ul>
                 </div></div>
-            </a>
+      </div>
   )
 }
 

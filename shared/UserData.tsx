@@ -58,7 +58,7 @@ const userMiddleName: string = "Kumar";
 const userLastName: string = "Ghosh";
 const userEmail: string = "ghoshaniketkumar7@gmail.com";
 const resumeDriveLink =
-  'https://drive.google.com/file/d/1v6N7c1hof5tUDkbO7-XjreOZqBX6W6TK/view?usp=sharing'
+  'https://drive.google.com/file/d/1Sw-XVlXSCRPeMJNQ5PYbxoT0G9JXpCQi/view?usp=drivesdk'
 
 const userHeadline: string = 'Software Engineer 3 @ NetApp';
 const userRoleSummary: string =
